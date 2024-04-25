@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>formulario</title>
+    <style>
+        * {
+            margin: 0px;
+        }
+
+        body {
+            background-color: gray;
+            height: 100vw;
+            width: 100vw;
+        }
+
+        body::-webkit-scrollbar {
+            scrollbar-width: none;
+        }
+
+        header > h1 {
+            text-align: center;
+        }
+
+        header {
+            background-color: blueviolet;
+            padding: 10px;
+        }
+
+        nav {
+            background-color: blueviolet;
+            padding-bottom: px;
+            margin:auto ;
+        }
+        nav > ul > li{
+            text-decoration: none;
+            padding: 10px;
+            display: inline-block;
+        }
+
+        nav ul > li:hover{
+            border-radius: 20px;
+            transition: 0.5s;
+            background-color: black;
+            color: #fff;
+            text-decoration: underline;
+        }
+
+        main{
+            margin: auto;
+            text-align: center;
+            height: 100%;
+            width: 500px;
+            background-color: #fff;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>formulario</h1>
+    </header>
+    <nav>
+        <ul>
+            <li>menu</li>
+            <li>home</li>
+            <li>contato</li>
+            <li>suporte</li>
+        </ul>
+    </nav>
+    <main>
+        <form action="cadastro.php" method="post">
+            <p>
+               <label for="inum">numero: </label>
+               <input type="range" name="num" id="inum" min="0" max="10" value="5" oninput="out.innerHTML = Number(inum.value)">
+               <output id="out">5</output>
+            </p>
+          <p>
+            <input type="submit" value="enviar">
+            <input type="reset" value="limpar">
+          </p>
+        </form>
+    </main>
+</body>
+</html>
