@@ -8,9 +8,28 @@
 <body>
     <h1>formulario</h1>
     <form action="cadastro.php" method="get">
+        <fieldset>
+            <legend>sexo</legend>
+            <label for="isxmas">masculino</label>
+            <input type="radio" name="sx" id="isxmas">
+            <label for="isxfem">feminino</label>
+            <input type="radio" name="sx" id="isxfem" checked>
+        </fieldset>
       <fieldset>
-         <legend>formulario</legend>
+         <legend>esportes favoritos</legend>
+           <label for="iesfut">futebol</label>
+           <input type="checkbox" name="esfut" id="iesfut"><br>
+           <label for="iesnat">natação</label>
+           <input type="checkbox" name="esnat" id="iesnat"><br>
+           <label for="iesjiu">jiujitsu</label>
+           <input type="checkbox" name="esjiu" id="iesjiu"><br>
+           <label for="iesvo">volei</label>
+           <input type="checkbox" name="esvo" id="iesvo"><br>
       </fieldset>
+      <p>
+          <input type="submit"value="enviar">
+          <input type="reset"value="limpar">
+      </p>
     </form>
 </body>
 </html>
