@@ -2,6 +2,85 @@
 
 /* todas as demais midias */
 
+/* typical device breakpoints
+----------------------------
+pequenas telas: ate 600px
+celular: de 600px ate 768px 
+tablet: de 768 ate 992px  
+desktop: de 992 ate 1200px 
+grandes telas: acima de 1200px
+*/
+
 @media print {
+    * {
+        font-family: 'Courier New', Courier, monospace;
+    }
+
+
+    body {
+        background-image: url(../imagens/back-print.jpg);
+    }
+
+    main {
+        width: 90%;
+        border: 1px solid black;
+    }
+
+    main::after {
+        content: 'essa impressão foi feito por @rayran';
+        text-decoration: overline;
+    }
+
+    #phone { display: none;}
+    #tablet {display: none;}
+    #print{display: block;}
+    #pc {display: none;}
+    #tv {display: none;}
+
+    main > h1 {
+        text-shadow: none;
+        color: black;
+    }
+}
+
+
+@media screen and (min-width:768px) and (max-width: 992px) {
+    body {
+        background-image: url(../imagens/back-tablet.jpg);
+    }
+
+    #phone { display: none;}
+    #tablet {display: block;}
+    #print{display: none;}
+    #pc {display: none;}
+    #tv {display: none;}
+}
+
+@media screen and (min-width:992px) and (max-width: 1200px) {
+    body {
+        background-image: url(../imagens/back-pc.jpg);
+    }
+
+    #phone { display: none;}
+    #tablet {display: none;}
+    #print{display: none;}
+    #pc {display: block;}
+    #tv {display: none;}
     
+}
+
+@media screen and (min-width: 1200px) {
+    body {
+        background-image: url(../imagens/back-tv.jpg);
+    }
+
+    main {
+        width: 90%;
+    }
+
+    #phone { display: none;}
+    #tablet {display: none;}
+    #print{display: none;}
+    #pc {display: none;}
+    #tv {display: block;}
 }
